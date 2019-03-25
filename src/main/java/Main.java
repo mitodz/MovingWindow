@@ -1,21 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
 
-    void run() {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] a = new int[n]; //первоначальный массив
-
-        for (int k = 0; k < n; k++) {
-            a[k] = scanner.nextInt();
-        }
-
+    void windowMax(int n, int[] a, int w) {
         int m1 = a[0];//максимальный элемент
         int i1 = 0;//индекс 1 максимального элемента
         int m2 = -1;//максимальный после первого
         int i2 = 0;//индекс 2 максимального элемента
-        int w = scanner.nextInt(); //размер окна
         int[] q = new int[n]; //массив, симулирующий далее очередь
         for (int i = 0; i < w; i++) { //первоначальное заполнение очереди (массива) элементами из окна
             q[i] = a[i];
@@ -55,7 +48,17 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        new Main().run();
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("input.txt"));
+        int n = scanner.nextInt();
+        int[] a = new int[n]; //первоначальный массив
+
+        for (int k = 0; k < n; k++) {
+            a[k] = scanner.nextInt();
+        }
+
+        int w = scanner.nextInt(); //размер окна
+
+        new Main().windowMax(n, a, w);
     }
 }
