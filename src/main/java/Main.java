@@ -1,11 +1,9 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
 
-    void run() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("input.txt"));
+    void run() {
+        Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] a = new int[n]; //первоначальный массив
 
@@ -39,7 +37,7 @@ public class Main {
 
         System.out.print(m1 + " "); //выводим первый максимальный элемент в окне
         for (int i = w; i < n; i++) { //выводим оставшиеся
-            if (i - w == i1) { //в случае, если "вылетающий из окна элемент по индексу равен текущему максимальному
+            if (i - w == i1) { //в случае, если "вылетающий" из окна элемент по индексу равен текущему максимальному
                 //то меняем его на второй максимум, заодно и индекс.
                 m1 = m2;
                 i1 = i2;
@@ -57,8 +55,7 @@ public class Main {
         }
     }
 
-
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         new Main().run();
     }
 }
