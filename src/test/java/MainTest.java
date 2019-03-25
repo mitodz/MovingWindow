@@ -5,7 +5,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @Test
-    void windowMax() {
+    void windowMax0() {//придумать новый тест
+        int n = 8;
+        int [] a = {1, 0, 2, 2, 2, 2, 0, 0};
+        int w = 4;
+        String actual = new Main().windowMax(n,a,w);
+        String expected = "2 2 2 2 2 ";
+        assertEquals(expected,actual);
+    }
+
+
+    @Test
+    void windowMax1() {
         int n = 8;
         int [] a = {1, 0, 2, 2, 2, 2, 0, 0};
         int w = 4;
