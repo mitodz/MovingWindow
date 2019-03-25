@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    void windowMax(int n, int[] a, int w) {
+    public String windowMax(int n, int[] a, int w) {
         int m1 = a[0];//максимальный элемент
         int i1 = 0;//индекс 1 максимального элемента
         int m2 = -1;//максимальный после первого
         int i2 = 0;//индекс 2 максимального элемента
         int[] q = new int[n]; //массив, симулирующий далее очередь
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < w; i++) { //первоначальное заполнение очереди (массива) элементами из окна
             q[i] = a[i];
         }
@@ -28,7 +29,7 @@ public class Main {
             }
         }
 
-        System.out.print(m1 + " "); //выводим первый максимальный элемент в окне
+        sb.append(m1).append(" "); //выводим первый максимальный элемент в окне
         for (int i = w; i < n; i++) { //выводим оставшиеся
             if (i - w == i1) { //в случае, если "вылетающий" из окна элемент по индексу равен текущему максимальному
                 //то меняем его на второй максимум, заодно и индекс.
@@ -44,8 +45,9 @@ public class Main {
                 m2 = a[i];
                 i2 = i;
             }
-            System.out.print(m1 + " ");
+            sb.append(m1).append(" ");
         }
+        return sb.toString();
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -58,7 +60,7 @@ public class Main {
         }
 
         int w = scanner.nextInt(); //размер окна
-
-        new Main().windowMax(n, a, w);
+        System.out.println(new Main().windowMax(n, a, w));
     }
 }
+
