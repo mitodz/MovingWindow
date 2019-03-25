@@ -47,7 +47,7 @@ public class Main {
             q.add(a[i]);
             if (m1 < a[i]) {
                 m1 = a[i];
-            } else if (m2 <= a[i]) {
+            } else if (m2 < a[i]) {
                 m2 = a[i];
             }
             System.out.print(m1 + " ");
