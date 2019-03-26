@@ -1,5 +1,3 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
@@ -51,8 +49,8 @@ public class Main {
         return sb.toString();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("input.txt"));
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] a = new int[n]; //первоначальный массив
 
