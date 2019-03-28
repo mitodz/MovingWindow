@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -44,16 +48,20 @@ public class Main {
         return sb.toString();
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws FileNotFoundException {
+        //Generate gen = new Generate();
+        //gen.generate();
+        Scanner scanner = new Scanner(new File("input.txt"));
         int n = scanner.nextInt();
+        //System.out.println(n);
         int[] a = new int[n]; //первоначальный массив
-
         for (int k = 0; k < n; k++) {
             a[k] = scanner.nextInt();
         }
-
+        //System.out.println(Arrays.toString(a));
         int w = scanner.nextInt(); //размер окна
+        //System.out.println(w);
+        //System.out.println();
         System.out.println(new Main().windowMax(n, a, w));
     }
 }

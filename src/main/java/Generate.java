@@ -3,14 +3,14 @@ import java.io.PrintWriter;
 import java.util.Random;
 
 public class Generate {
-    public static void main(String[] args) {
+    public void generate() {
         try (PrintWriter printWriter = new PrintWriter("input.txt")) {
-            int n = 100_000;
-            int m = 1;
+            int n = 10;
+            int m = 4;
             Random rnd = new Random();
             printWriter.println(n);
             for (int i = 0; i < n; i++) {
-                printWriter.print(rnd.nextInt(n) + " ");
+                printWriter.print(rnd.nextInt(3) + " ");
             }
             printWriter.println("\n" + m);
         } catch (FileNotFoundException e) {
