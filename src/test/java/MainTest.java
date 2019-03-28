@@ -75,12 +75,22 @@ class MainTest {
     }
 
     @Test
-    void windowMax7() {//придумать новый тест
+    void windowMax7() {
         int n = 8;
         int [] a = {2, 2, 2, 2, 2, 0, 0, 0};
         int w = 3;
         String actual = new Main().windowMax(n,a,w);
         String expected = "2 2 2 2 2 0 ";
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void windowMax8() {//придумать новый тест
+        int n = 6;
+        int [] a = {0, 0, 2, 2, 2, 2};
+        int w = 2;
+        String actual = new Main().windowMax(n,a,w);
+        String expected = "0 2 2 2 2 ";
         assertEquals(expected,actual);
     }
 
