@@ -80,7 +80,7 @@ class MainTest {
         int [] a = {2, 2, 2, 2, 2, 0, 0, 0};
         int w = 3;
         String actual = new Main().windowMax(n,a,w);
-        String expected = "2 2 2 2 0 0 ";
+        String expected = "2 2 2 2 2 0 ";
         assertEquals(expected,actual);
     }
 
