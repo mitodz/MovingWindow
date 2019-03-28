@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @Test
-    void windowMax0() {//придумать новый тест
+    void windowMax0() {
         int n = 8;
         int [] a = {1, 2, 2, 2, 2, 0, 0, 0};
         int w = 3;
@@ -86,11 +86,11 @@ class MainTest {
 
     @Test
     void windowMax8() {//придумать новый тест
-        int n = 6;
-        int [] a = {0, 0, 2, 2, 2, 2};
-        int w = 2;
+        int n = 7;
+        int [] a = {0, 2, 2, 2, 0, 3, 0};
+        int w = 3;
         String actual = new Main().windowMax(n,a,w);
-        String expected = "0 2 2 2 2 ";
+        String expected = "2 2 2 3 3 ";
         assertEquals(expected,actual);
     }
 
