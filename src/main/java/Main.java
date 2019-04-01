@@ -43,7 +43,7 @@ public class Main {
                 m2=-1;
                 continue;
             }
-            if (m2 < a[i]) {
+            if (m2 <= a[i]) {
                 m2 = a[i];
                 i2 = i;
                 if (m1==m2) i1=i2;

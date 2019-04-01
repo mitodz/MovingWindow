@@ -94,4 +94,15 @@ class MainTest {
         assertEquals(expected,actual);
     }
 
+    @Test
+    void windowMax9() {//придумать новый тест
+        int n = 7;
+        int [] a = {6, 5, 4, 3, 2, 1, 0};
+        int w = 3;
+        String actual = new Main().windowMax(n,a,w);
+        String expected = "6 5 4 3 2 ";
+        assertEquals(expected,actual);
+    }
+
+
 }

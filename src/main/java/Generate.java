@@ -5,8 +5,8 @@ import java.util.Random;
 public class Generate {
     public void generate() {
         try (PrintWriter printWriter = new PrintWriter("input.txt")) {
-            int n = 10;
-            int m = 4;
+            int n = 7;
+            int m = 2;
             Random rnd = new Random();
             printWriter.println(n);
             for (int i = 0; i < n; i++) {
