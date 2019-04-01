@@ -38,7 +38,12 @@ public class Main {
             if (m1 <= a[i]) {
                 m1 = a[i];
                 i1 = i;
-            } else if (m2 <= a[i]) {
+                i2=i;
+                sb.append(m1).append(" ");
+                m2=-1;
+                continue;
+            }
+            if (m2 < a[i]) {
                 m2 = a[i];
                 i2 = i;
                 if (m1==m2) i1=i2;
